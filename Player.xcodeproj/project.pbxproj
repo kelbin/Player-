@@ -19,7 +19,6 @@
 		BC7A51F71F2154E70047DABD /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A51ED1F2154E70047DABD /* PlayerController.swift */; };
 		BC7A51FA1F2154F60047DABD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A51F91F2154F60047DABD /* Service.swift */; };
 		BC7A51FF1F2154FD0047DABD /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51FE1F2154FD0047DABD /* Data.json */; };
-		BC7A52031F2155E00047DABD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC7A52021F2155E00047DABD /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,7 +218,6 @@
 			files = (
 				BC7A51F61F2154E70047DABD /* Main.storyboard in Resources */,
 				BC7A51F11F2154E70047DABD /* Utmarken - Förfallstid.mp3 in Resources */,
-				BC7A52031F2155E00047DABD /* Info.plist in Resources */,
 				BC7A51EF1F2154E70047DABD /* Haggard - Awaking the Centuries.mp3 in Resources */,
 				BC7A51FF1F2154FD0047DABD /* Data.json in Resources */,
 				BC7A51F21F2154E70047DABD /* Utmarken - Vintern.mp3 in Resources */,
