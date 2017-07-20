@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		BC0CB91F1F0E78D700FCA45A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CB91E1F0E78D700FCA45A /* AppDelegate.swift */; };
-		BC0CB9211F0E78D700FCA45A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CB9201F0E78D700FCA45A /* ViewController.swift */; };
 		BC0CB9241F0E78D700FCA45A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0CB9221F0E78D700FCA45A /* Main.storyboard */; };
 		BC0CB9261F0E78D700FCA45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC0CB9251F0E78D700FCA45A /* Assets.xcassets */; };
 		BC0CB9291F0E78D700FCA45A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0CB9271F0E78D700FCA45A /* LaunchScreen.storyboard */; };
 		BC0CB9341F0E78D700FCA45A /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CB9331F0E78D700FCA45A /* PlayerTests.swift */; };
 		BC0CB93F1F0E78D700FCA45A /* PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CB93E1F0E78D700FCA45A /* PlayerUITests.swift */; };
+		BC3AF1531F18F01600C98127 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = BC3AF1521F18F01600C98127 /* Data.json */; };
+		BC71D7D21F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC71D7CE1F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 */; };
+		BC71D7D31F17B82F004A0898 /* Haggard - Eppur si muove.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC71D7CF1F17B82F004A0898 /* Haggard - Eppur si muove.mp3 */; };
+		BC71D7D41F17B82F004A0898 /* Utmarken - Förfallstid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC71D7D01F17B82F004A0898 /* Utmarken - Förfallstid.mp3 */; };
+		BC71D7D51F17B82F004A0898 /* Utmarken - Vintern.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC71D7D11F17B82F004A0898 /* Utmarken - Vintern.mp3 */; };
+		BC7DF2651F20EAB50017A55B /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7DF2641F20EAB50017A55B /* PlayerController.swift */; };
 		BC93C1EB1F16826800124950 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93C1EA1F16826800124950 /* Service.swift */; };
 		BC93C1ED1F168F6000124950 /* DataMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93C1EC1F168F6000124950 /* DataMusic.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +43,6 @@
 /* Begin PBXFileReference section */
 		BC0CB91B1F0E78D700FCA45A /* Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0CB91E1F0E78D700FCA45A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../Player/AppDelegate.swift; sourceTree = "<group>"; };
-		BC0CB9201F0E78D700FCA45A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../Player/ViewController.swift; sourceTree = "<group>"; };
 		BC0CB9231F0E78D700FCA45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BC0CB9251F0E78D700FCA45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Player/Assets.xcassets; sourceTree = "<group>"; };
 		BC0CB9281F0E78D700FCA45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,12 @@
 		BC0CB93A1F0E78D700FCA45A /* PlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC0CB93E1F0E78D700FCA45A /* PlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUITests.swift; sourceTree = "<group>"; };
 		BC0CB9401F0E78D700FCA45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC3AF1521F18F01600C98127 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		BC71D7CE1F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Haggard - Awaking the Centuries.mp3"; sourceTree = "<group>"; };
+		BC71D7CF1F17B82F004A0898 /* Haggard - Eppur si muove.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Haggard - Eppur si muove.mp3"; sourceTree = "<group>"; };
+		BC71D7D01F17B82F004A0898 /* Utmarken - Förfallstid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Utmarken - Förfallstid.mp3"; sourceTree = "<group>"; };
+		BC71D7D11F17B82F004A0898 /* Utmarken - Vintern.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Utmarken - Vintern.mp3"; sourceTree = "<group>"; };
+		BC7DF2641F20EAB50017A55B /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		BC93C1EA1F16826800124950 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		BC93C1EC1F168F6000124950 /* DataMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMusic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +114,7 @@
 				BC93C1E71F16818300124950 /* Model */,
 				BC93C1E81F16819100124950 /* View */,
 				BC0CB92A1F0E78D700FCA45A /* Info.plist */,
+				BC71D7CC1F17B7E7004A0898 /* Stuff */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -126,12 +137,40 @@
 			path = PlayerUITests;
 			sourceTree = "<group>";
 		};
+		BC71D7CC1F17B7E7004A0898 /* Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				BC71D7CD1F17B7E7004A0898 /* Music */,
+			);
+			path = Stuff;
+			sourceTree = SOURCE_ROOT;
+		};
+		BC71D7CD1F17B7E7004A0898 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				BC71D7CE1F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 */,
+				BC71D7CF1F17B82F004A0898 /* Haggard - Eppur si muove.mp3 */,
+				BC71D7D01F17B82F004A0898 /* Utmarken - Förfallstid.mp3 */,
+				BC71D7D11F17B82F004A0898 /* Utmarken - Vintern.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		BC71D7D61F17BD2D004A0898 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BC3AF1521F18F01600C98127 /* Data.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		BC93C1E71F16818300124950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				BC0CB91E1F0E78D700FCA45A /* AppDelegate.swift */,
 				BC93C1EA1F16826800124950 /* Service.swift */,
 				BC93C1EC1F168F6000124950 /* DataMusic.swift */,
+				BC71D7D61F17BD2D004A0898 /* JSON */,
 			);
 			path = Model;
 			sourceTree = SOURCE_ROOT;
@@ -142,7 +181,7 @@
 				BC0CB9251F0E78D700FCA45A /* Assets.xcassets */,
 				BC0CB9271F0E78D700FCA45A /* LaunchScreen.storyboard */,
 				BC0CB9221F0E78D700FCA45A /* Main.storyboard */,
-				BC0CB9201F0E78D700FCA45A /* ViewController.swift */,
+				BC7DF2641F20EAB50017A55B /* PlayerController.swift */,
 				BC93C1E91F16819100124950 /* img */,
 			);
 			path = View;
@@ -263,7 +302,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC0CB9291F0E78D700FCA45A /* LaunchScreen.storyboard in Resources */,
+				BC71D7D21F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 in Resources */,
 				BC0CB9261F0E78D700FCA45A /* Assets.xcassets in Resources */,
+				BC3AF1531F18F01600C98127 /* Data.json in Resources */,
+				BC71D7D51F17B82F004A0898 /* Utmarken - Vintern.mp3 in Resources */,
+				BC71D7D41F17B82F004A0898 /* Utmarken - Förfallstid.mp3 in Resources */,
+				BC71D7D31F17B82F004A0898 /* Haggard - Eppur si muove.mp3 in Resources */,
 				BC0CB9241F0E78D700FCA45A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,9 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC0CB9211F0E78D700FCA45A /* ViewController.swift in Sources */,
 				BC93C1ED1F168F6000124950 /* DataMusic.swift in Sources */,
 				BC0CB91F1F0E78D700FCA45A /* AppDelegate.swift in Sources */,
+				BC7DF2651F20EAB50017A55B /* PlayerController.swift in Sources */,
 				BC93C1EB1F16826800124950 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

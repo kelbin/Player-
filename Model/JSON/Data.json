@@ -1,0 +1,33 @@
+{
+  "music":[
+  {
+    "name": "Haggard - Awaking the Centuries",
+    "url": "Haggard - Awaking the Centuries.mp3",
+    "genre": "Epic Metal",
+    "album": "Awaking the Centuries",
+    "author": "Haggard"
+  },
+  {
+    "name": "Haggard - Eppur si muove",
+    "url": "Haggard - Eppur si muove.mp3",
+    "genre": "Epic Metal",
+    "album": "Eppur si muove",
+    "author": "Haggard"
+  },
+  {
+    "name": "Utmarken - Förfallstid",
+    "url": "Utmarken - Förfallstid.mp3",
+    "genre": "Folk Metal",
+    "album": "Förfallstid",
+    "author": "Utmarken"
+  },
+  {
+    "name": "Utmarken - Vintern",
+    "url": "Utmarken - Vintern.mp3",
+    "genre": "Folk Metal",
+    "album": "Förfallstid",
+    "author": "Utmarken"
+  }
+]
+  
+}

@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct DataMusic {
+struct Song {
     var name:String
-    var music:String
+    var url:String
     var genre:String
     var album:String?
     var author:String?
