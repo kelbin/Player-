@@ -26,13 +26,13 @@ class JsonFileSongService: MusicService {
             let jsonObj = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
             if let jsonObj = jsonObj as? [String: Any] {
                 if let rootArray = jsonObj["music"] as? [[String:Any]] {
-                    for songJson in rootArray {
+                    for musicJson in rootArray {
                         let music = Music(
-                            name: songJson["name"] as? String ?? "",
-                            url: songJson["url"] as? String ?? "",
-                            genre: songJson["genre"] as? String ?? "",
-                            album: songJson["album"] as? String,
-                            author: songJson["author"] as? String
+                            name: musicJson["name"] as? String ?? "",
+                            url: musicJson["url"] as? String ?? "",
+                            genre: musicJson["genre"] as? String ?? "",
+                            album: musicJson["album"] as? String,
+                            author: musicJson["author"] as? String
                         )
                         musicList.append(music)
                     }
