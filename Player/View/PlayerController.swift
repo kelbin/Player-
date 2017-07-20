@@ -7,9 +7,20 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class PlayerController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var musicVar: JsonFileSongService = JsonFileSongService()
+    @IBAction func playButton(_ sender: Any) {
+        let url = URL(string: "https://cs1-46v4.vk-cdn.net/p19/d4726e26efde32.mp3?extra=zcCFmZYSDtYaIpoTA2g_pJS4cba3xsDRdYGnozwSPc6jhDRFeHcTZFBapeiuUsQoibDLs-4oMZxyWsa9BsyQgWSlqs1l0hyfwG3NVJLnFNJJI5qWIRyXe4kmHoe-o3V444LIcIrEOBAQXQkY")
+        let player = AVPlayer(url:url!)
+        let controller = AVPlayerViewController()
+        controller.player = player
+        present(controller,animated: true) {
+            player.play()
+        }
+    }
+    var musicVar: MusicService = JsonFileSongService()
     var musicList: Array<String> = []
     override func viewDidLoad() {
         super.viewDidLoad()

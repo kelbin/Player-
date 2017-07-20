@@ -20,7 +20,7 @@
 		BC71D7D51F17B82F004A0898 /* Utmarken - Vintern.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC71D7D11F17B82F004A0898 /* Utmarken - Vintern.mp3 */; };
 		BC7DF2651F20EAB50017A55B /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7DF2641F20EAB50017A55B /* PlayerController.swift */; };
 		BC93C1EB1F16826800124950 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93C1EA1F16826800124950 /* Service.swift */; };
-		BC93C1ED1F168F6000124950 /* DataMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93C1EC1F168F6000124950 /* DataMusic.swift */; };
+		BC93C1ED1F168F6000124950 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93C1EC1F168F6000124950 /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,8 @@
 		BC71D7D01F17B82F004A0898 /* Utmarken - Förfallstid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Utmarken - Förfallstid.mp3"; sourceTree = "<group>"; };
 		BC71D7D11F17B82F004A0898 /* Utmarken - Vintern.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Utmarken - Vintern.mp3"; sourceTree = "<group>"; };
 		BC7DF2641F20EAB50017A55B /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
-		BC93C1EA1F16826800124950 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		BC93C1EC1F168F6000124950 /* DataMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataMusic.swift; sourceTree = "<group>"; };
+		BC93C1EA1F16826800124950 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../Model/Service.swift; sourceTree = "<group>"; };
+		BC93C1EC1F168F6000124950 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,8 @@
 				BC0CB9321F0E78D700FCA45A /* PlayerTests */,
 				BC0CB93D1F0E78D700FCA45A /* PlayerUITests */,
 				BC0CB91C1F0E78D700FCA45A /* Products */,
+				BC7A51DB1F2151F00047DABD /* Service */,
+				BC7A51D71F21510C0047DABD /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,16 +163,38 @@
 			children = (
 				BC3AF1521F18F01600C98127 /* Data.json */,
 			);
-			path = JSON;
+			name = JSON;
+			path = ../../Model/JSON;
+			sourceTree = "<group>";
+		};
+		BC7A51D71F21510C0047DABD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC7A51D81F21510C0047DABD /* Test */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BC7A51D81F21510C0047DABD /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				BC71D7D61F17BD2D004A0898 /* JSON */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		BC7A51DB1F2151F00047DABD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BC93C1EA1F16826800124950 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		BC93C1E71F16818300124950 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BC0CB91E1F0E78D700FCA45A /* AppDelegate.swift */,
-				BC93C1EA1F16826800124950 /* Service.swift */,
-				BC93C1EC1F168F6000124950 /* DataMusic.swift */,
-				BC71D7D61F17BD2D004A0898 /* JSON */,
+				BC93C1EC1F168F6000124950 /* Music.swift */,
 			);
 			path = Model;
 			sourceTree = SOURCE_ROOT;
@@ -178,6 +202,7 @@
 		BC93C1E81F16819100124950 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC0CB91E1F0E78D700FCA45A /* AppDelegate.swift */,
 				BC0CB9251F0E78D700FCA45A /* Assets.xcassets */,
 				BC0CB9271F0E78D700FCA45A /* LaunchScreen.storyboard */,
 				BC0CB9221F0E78D700FCA45A /* Main.storyboard */,
@@ -333,7 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC93C1ED1F168F6000124950 /* DataMusic.swift in Sources */,
+				BC93C1ED1F168F6000124950 /* Music.swift in Sources */,
 				BC0CB91F1F0E78D700FCA45A /* AppDelegate.swift in Sources */,
 				BC7DF2651F20EAB50017A55B /* PlayerController.swift in Sources */,
 				BC93C1EB1F16826800124950 /* Service.swift in Sources */,

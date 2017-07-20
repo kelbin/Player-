@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Song {
+struct Music {
     var name:String
     var url:String
     var genre:String
