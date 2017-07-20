@@ -7,78 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC0CB91F1F0E78D700FCA45A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CB91E1F0E78D700FCA45A /* AppDelegate.swift */; };
-		BC0CB9241F0E78D700FCA45A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0CB9221F0E78D700FCA45A /* Main.storyboard */; };
-		BC0CB9261F0E78D700FCA45A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC0CB9251F0E78D700FCA45A /* Assets.xcassets */; };
-		BC0CB9291F0E78D700FCA45A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0CB9271F0E78D700FCA45A /* LaunchScreen.storyboard */; };
-		BC0CB9341F0E78D700FCA45A /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CB9331F0E78D700FCA45A /* PlayerTests.swift */; };
-		BC0CB93F1F0E78D700FCA45A /* PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0CB93E1F0E78D700FCA45A /* PlayerUITests.swift */; };
-		BC3AF1531F18F01600C98127 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = BC3AF1521F18F01600C98127 /* Data.json */; };
-		BC71D7D21F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC71D7CE1F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 */; };
-		BC71D7D31F17B82F004A0898 /* Haggard - Eppur si muove.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC71D7CF1F17B82F004A0898 /* Haggard - Eppur si muove.mp3 */; };
-		BC71D7D41F17B82F004A0898 /* Utmarken - Förfallstid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC71D7D01F17B82F004A0898 /* Utmarken - Förfallstid.mp3 */; };
-		BC71D7D51F17B82F004A0898 /* Utmarken - Vintern.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC71D7D11F17B82F004A0898 /* Utmarken - Vintern.mp3 */; };
-		BC7DF2651F20EAB50017A55B /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7DF2641F20EAB50017A55B /* PlayerController.swift */; };
-		BC93C1EB1F16826800124950 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93C1EA1F16826800124950 /* Service.swift */; };
-		BC93C1ED1F168F6000124950 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC93C1EC1F168F6000124950 /* Music.swift */; };
+		BC7A51EE1F2154E70047DABD /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A51DE1F2154E70047DABD /* Music.swift */; };
+		BC7A51EF1F2154E70047DABD /* Haggard - Awaking the Centuries.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51E11F2154E70047DABD /* Haggard - Awaking the Centuries.mp3 */; };
+		BC7A51F01F2154E70047DABD /* Haggard - Eppur si muove.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51E21F2154E70047DABD /* Haggard - Eppur si muove.mp3 */; };
+		BC7A51F11F2154E70047DABD /* Utmarken - Förfallstid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51E31F2154E70047DABD /* Utmarken - Förfallstid.mp3 */; };
+		BC7A51F21F2154E70047DABD /* Utmarken - Vintern.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51E41F2154E70047DABD /* Utmarken - Vintern.mp3 */; };
+		BC7A51F31F2154E70047DABD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A51E61F2154E70047DABD /* AppDelegate.swift */; };
+		BC7A51F41F2154E70047DABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51E71F2154E70047DABD /* Assets.xcassets */; };
+		BC7A51F51F2154E70047DABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51E81F2154E70047DABD /* LaunchScreen.storyboard */; };
+		BC7A51F61F2154E70047DABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51EA1F2154E70047DABD /* Main.storyboard */; };
+		BC7A51F71F2154E70047DABD /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A51ED1F2154E70047DABD /* PlayerController.swift */; };
+		BC7A51FA1F2154F60047DABD /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A51F91F2154F60047DABD /* Service.swift */; };
+		BC7A51FF1F2154FD0047DABD /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51FE1F2154FD0047DABD /* Data.json */; };
+		BC7A52031F2155E00047DABD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC7A52021F2155E00047DABD /* Info.plist */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BC0CB9301F0E78D700FCA45A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BC0CB9131F0E78D700FCA45A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BC0CB91A1F0E78D700FCA45A;
-			remoteInfo = Player;
-		};
-		BC0CB93B1F0E78D700FCA45A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BC0CB9131F0E78D700FCA45A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BC0CB91A1F0E78D700FCA45A;
-			remoteInfo = Player;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BC0CB91B1F0E78D700FCA45A /* Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC0CB91E1F0E78D700FCA45A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../Player/AppDelegate.swift; sourceTree = "<group>"; };
-		BC0CB9231F0E78D700FCA45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BC0CB9251F0E78D700FCA45A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Player/Assets.xcassets; sourceTree = "<group>"; };
-		BC0CB9281F0E78D700FCA45A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BC0CB92A1F0E78D700FCA45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC0CB92F1F0E78D700FCA45A /* PlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC0CB9331F0E78D700FCA45A /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
-		BC0CB9351F0E78D700FCA45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC0CB93A1F0E78D700FCA45A /* PlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC0CB93E1F0E78D700FCA45A /* PlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerUITests.swift; sourceTree = "<group>"; };
-		BC0CB9401F0E78D700FCA45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BC3AF1521F18F01600C98127 /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
-		BC71D7CE1F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Haggard - Awaking the Centuries.mp3"; sourceTree = "<group>"; };
-		BC71D7CF1F17B82F004A0898 /* Haggard - Eppur si muove.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Haggard - Eppur si muove.mp3"; sourceTree = "<group>"; };
-		BC71D7D01F17B82F004A0898 /* Utmarken - Förfallstid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Utmarken - Förfallstid.mp3"; sourceTree = "<group>"; };
-		BC71D7D11F17B82F004A0898 /* Utmarken - Vintern.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Utmarken - Vintern.mp3"; sourceTree = "<group>"; };
-		BC7DF2641F20EAB50017A55B /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
-		BC93C1EA1F16826800124950 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../Model/Service.swift; sourceTree = "<group>"; };
-		BC93C1EC1F168F6000124950 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		BC7A51DE1F2154E70047DABD /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		BC7A51E11F2154E70047DABD /* Haggard - Awaking the Centuries.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Haggard - Awaking the Centuries.mp3"; sourceTree = "<group>"; };
+		BC7A51E21F2154E70047DABD /* Haggard - Eppur si muove.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Haggard - Eppur si muove.mp3"; sourceTree = "<group>"; };
+		BC7A51E31F2154E70047DABD /* Utmarken - Förfallstid.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Utmarken - Förfallstid.mp3"; sourceTree = "<group>"; };
+		BC7A51E41F2154E70047DABD /* Utmarken - Vintern.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Utmarken - Vintern.mp3"; sourceTree = "<group>"; };
+		BC7A51E61F2154E70047DABD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC7A51E71F2154E70047DABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC7A51E91F2154E70047DABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC7A51EB1F2154E70047DABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC7A51ED1F2154E70047DABD /* PlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
+		BC7A51F91F2154F60047DABD /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		BC7A51FE1F2154FD0047DABD /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		BC7A52021F2155E00047DABD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC0CB9181F0E78D700FCA45A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC0CB92C1F0E78D700FCA45A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC0CB9371F0E78D700FCA45A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -91,12 +53,10 @@
 		BC0CB9121F0E78D700FCA45A = {
 			isa = PBXGroup;
 			children = (
-				BC0CB91D1F0E78D700FCA45A /* Player */,
-				BC0CB9321F0E78D700FCA45A /* PlayerTests */,
-				BC0CB93D1F0E78D700FCA45A /* PlayerUITests */,
+				BC7A51FB1F2154FD0047DABD /* Resources */,
+				BC7A51F81F2154F60047DABD /* Service */,
+				BC7A51DC1F2154E70047DABD /* Player */,
 				BC0CB91C1F0E78D700FCA45A /* Products */,
-				BC7A51DB1F2151F00047DABD /* Service */,
-				BC7A51D71F21510C0047DABD /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,119 +64,98 @@
 			isa = PBXGroup;
 			children = (
 				BC0CB91B1F0E78D700FCA45A /* Player.app */,
-				BC0CB92F1F0E78D700FCA45A /* PlayerTests.xctest */,
-				BC0CB93A1F0E78D700FCA45A /* PlayerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC0CB91D1F0E78D700FCA45A /* Player */ = {
+		BC7A51DC1F2154E70047DABD /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				BC93C1E71F16818300124950 /* Model */,
-				BC93C1E81F16819100124950 /* View */,
-				BC0CB92A1F0E78D700FCA45A /* Info.plist */,
-				BC71D7CC1F17B7E7004A0898 /* Stuff */,
+				BC7A52021F2155E00047DABD /* Info.plist */,
+				BC7A51DD1F2154E70047DABD /* Model */,
+				BC7A51DF1F2154E70047DABD /* Stuff */,
+				BC7A51E51F2154E70047DABD /* View */,
 			);
 			path = Player;
 			sourceTree = "<group>";
 		};
-		BC0CB9321F0E78D700FCA45A /* PlayerTests */ = {
+		BC7A51DD1F2154E70047DABD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BC0CB9331F0E78D700FCA45A /* PlayerTests.swift */,
-				BC0CB9351F0E78D700FCA45A /* Info.plist */,
+				BC7A51DE1F2154E70047DABD /* Music.swift */,
 			);
-			path = PlayerTests;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		BC0CB93D1F0E78D700FCA45A /* PlayerUITests */ = {
+		BC7A51DF1F2154E70047DABD /* Stuff */ = {
 			isa = PBXGroup;
 			children = (
-				BC0CB93E1F0E78D700FCA45A /* PlayerUITests.swift */,
-				BC0CB9401F0E78D700FCA45A /* Info.plist */,
-			);
-			path = PlayerUITests;
-			sourceTree = "<group>";
-		};
-		BC71D7CC1F17B7E7004A0898 /* Stuff */ = {
-			isa = PBXGroup;
-			children = (
-				BC71D7CD1F17B7E7004A0898 /* Music */,
+				BC7A51E01F2154E70047DABD /* Music */,
 			);
 			path = Stuff;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		BC71D7CD1F17B7E7004A0898 /* Music */ = {
+		BC7A51E01F2154E70047DABD /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				BC71D7CE1F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 */,
-				BC71D7CF1F17B82F004A0898 /* Haggard - Eppur si muove.mp3 */,
-				BC71D7D01F17B82F004A0898 /* Utmarken - Förfallstid.mp3 */,
-				BC71D7D11F17B82F004A0898 /* Utmarken - Vintern.mp3 */,
+				BC7A51E11F2154E70047DABD /* Haggard - Awaking the Centuries.mp3 */,
+				BC7A51E21F2154E70047DABD /* Haggard - Eppur si muove.mp3 */,
+				BC7A51E31F2154E70047DABD /* Utmarken - Förfallstid.mp3 */,
+				BC7A51E41F2154E70047DABD /* Utmarken - Vintern.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
 		};
-		BC71D7D61F17BD2D004A0898 /* JSON */ = {
+		BC7A51E51F2154E70047DABD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BC3AF1521F18F01600C98127 /* Data.json */,
-			);
-			name = JSON;
-			path = ../../Model/JSON;
-			sourceTree = "<group>";
-		};
-		BC7A51D71F21510C0047DABD /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BC7A51D81F21510C0047DABD /* Test */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		BC7A51D81F21510C0047DABD /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				BC71D7D61F17BD2D004A0898 /* JSON */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
-		BC7A51DB1F2151F00047DABD /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				BC93C1EA1F16826800124950 /* Service.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		BC93C1E71F16818300124950 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				BC93C1EC1F168F6000124950 /* Music.swift */,
-			);
-			path = Model;
-			sourceTree = SOURCE_ROOT;
-		};
-		BC93C1E81F16819100124950 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BC0CB91E1F0E78D700FCA45A /* AppDelegate.swift */,
-				BC0CB9251F0E78D700FCA45A /* Assets.xcassets */,
-				BC0CB9271F0E78D700FCA45A /* LaunchScreen.storyboard */,
-				BC0CB9221F0E78D700FCA45A /* Main.storyboard */,
-				BC7DF2641F20EAB50017A55B /* PlayerController.swift */,
-				BC93C1E91F16819100124950 /* img */,
+				BC7A51E61F2154E70047DABD /* AppDelegate.swift */,
+				BC7A51E71F2154E70047DABD /* Assets.xcassets */,
+				BC7A51E81F2154E70047DABD /* LaunchScreen.storyboard */,
+				BC7A51EA1F2154E70047DABD /* Main.storyboard */,
+				BC7A51EC1F2154E70047DABD /* img */,
+				BC7A51ED1F2154E70047DABD /* PlayerController.swift */,
 			);
 			path = View;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		BC93C1E91F16819100124950 /* img */ = {
+		BC7A51EC1F2154E70047DABD /* img */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = img;
+			sourceTree = "<group>";
+		};
+		BC7A51F81F2154F60047DABD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BC7A51F91F2154F60047DABD /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BC7A51FB1F2154FD0047DABD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC7A51FC1F2154FD0047DABD /* Test */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BC7A51FC1F2154FD0047DABD /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				BC7A51FD1F2154FD0047DABD /* JSON */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		BC7A51FD1F2154FD0047DABD /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BC7A51FE1F2154FD0047DABD /* Data.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,42 +178,6 @@
 			productReference = BC0CB91B1F0E78D700FCA45A /* Player.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BC0CB92E1F0E78D700FCA45A /* PlayerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC0CB9461F0E78D700FCA45A /* Build configuration list for PBXNativeTarget "PlayerTests" */;
-			buildPhases = (
-				BC0CB92B1F0E78D700FCA45A /* Sources */,
-				BC0CB92C1F0E78D700FCA45A /* Frameworks */,
-				BC0CB92D1F0E78D700FCA45A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BC0CB9311F0E78D700FCA45A /* PBXTargetDependency */,
-			);
-			name = PlayerTests;
-			productName = PlayerTests;
-			productReference = BC0CB92F1F0E78D700FCA45A /* PlayerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BC0CB9391F0E78D700FCA45A /* PlayerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BC0CB9491F0E78D700FCA45A /* Build configuration list for PBXNativeTarget "PlayerUITests" */;
-			buildPhases = (
-				BC0CB9361F0E78D700FCA45A /* Sources */,
-				BC0CB9371F0E78D700FCA45A /* Frameworks */,
-				BC0CB9381F0E78D700FCA45A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BC0CB93C1F0E78D700FCA45A /* PBXTargetDependency */,
-			);
-			name = PlayerUITests;
-			productName = PlayerUITests;
-			productReference = BC0CB93A1F0E78D700FCA45A /* PlayerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -288,16 +191,6 @@
 					BC0CB91A1F0E78D700FCA45A = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
-					};
-					BC0CB92E1F0E78D700FCA45A = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = BC0CB91A1F0E78D700FCA45A;
-					};
-					BC0CB9391F0E78D700FCA45A = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = BC0CB91A1F0E78D700FCA45A;
 					};
 				};
 			};
@@ -315,8 +208,6 @@
 			projectRoot = "";
 			targets = (
 				BC0CB91A1F0E78D700FCA45A /* Player */,
-				BC0CB92E1F0E78D700FCA45A /* PlayerTests */,
-				BC0CB9391F0E78D700FCA45A /* PlayerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -326,28 +217,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC0CB9291F0E78D700FCA45A /* LaunchScreen.storyboard in Resources */,
-				BC71D7D21F17B82F004A0898 /* Haggard - Awaking the Centuries.mp3 in Resources */,
-				BC0CB9261F0E78D700FCA45A /* Assets.xcassets in Resources */,
-				BC3AF1531F18F01600C98127 /* Data.json in Resources */,
-				BC71D7D51F17B82F004A0898 /* Utmarken - Vintern.mp3 in Resources */,
-				BC71D7D41F17B82F004A0898 /* Utmarken - Förfallstid.mp3 in Resources */,
-				BC71D7D31F17B82F004A0898 /* Haggard - Eppur si muove.mp3 in Resources */,
-				BC0CB9241F0E78D700FCA45A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC0CB92D1F0E78D700FCA45A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC0CB9381F0E78D700FCA45A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BC7A51F61F2154E70047DABD /* Main.storyboard in Resources */,
+				BC7A51F11F2154E70047DABD /* Utmarken - Förfallstid.mp3 in Resources */,
+				BC7A52031F2155E00047DABD /* Info.plist in Resources */,
+				BC7A51EF1F2154E70047DABD /* Haggard - Awaking the Centuries.mp3 in Resources */,
+				BC7A51FF1F2154FD0047DABD /* Data.json in Resources */,
+				BC7A51F21F2154E70047DABD /* Utmarken - Vintern.mp3 in Resources */,
+				BC7A51F51F2154E70047DABD /* LaunchScreen.storyboard in Resources */,
+				BC7A51F01F2154E70047DABD /* Haggard - Eppur si muove.mp3 in Resources */,
+				BC7A51F41F2154E70047DABD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,61 +236,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC93C1ED1F168F6000124950 /* Music.swift in Sources */,
-				BC0CB91F1F0E78D700FCA45A /* AppDelegate.swift in Sources */,
-				BC7DF2651F20EAB50017A55B /* PlayerController.swift in Sources */,
-				BC93C1EB1F16826800124950 /* Service.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC0CB92B1F0E78D700FCA45A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC0CB9341F0E78D700FCA45A /* PlayerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BC0CB9361F0E78D700FCA45A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BC0CB93F1F0E78D700FCA45A /* PlayerUITests.swift in Sources */,
+				BC7A51F31F2154E70047DABD /* AppDelegate.swift in Sources */,
+				BC7A51FA1F2154F60047DABD /* Service.swift in Sources */,
+				BC7A51EE1F2154E70047DABD /* Music.swift in Sources */,
+				BC7A51F71F2154E70047DABD /* PlayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BC0CB9311F0E78D700FCA45A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BC0CB91A1F0E78D700FCA45A /* Player */;
-			targetProxy = BC0CB9301F0E78D700FCA45A /* PBXContainerItemProxy */;
-		};
-		BC0CB93C1F0E78D700FCA45A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BC0CB91A1F0E78D700FCA45A /* Player */;
-			targetProxy = BC0CB93B1F0E78D700FCA45A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		BC0CB9221F0E78D700FCA45A /* Main.storyboard */ = {
+		BC7A51E81F2154E70047DABD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BC0CB9231F0E78D700FCA45A /* Base */,
-			);
-			name = Main.storyboard;
-			path = ../Player;
-			sourceTree = "<group>";
-		};
-		BC0CB9271F0E78D700FCA45A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BC0CB9281F0E78D700FCA45A /* Base */,
+				BC7A51E91F2154E70047DABD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			path = ../Player;
+			sourceTree = "<group>";
+		};
+		BC7A51EA1F2154E70047DABD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC7A51EB1F2154E70047DABD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -516,7 +363,6 @@
 		BC0CB9441F0E78D700FCA45A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Player/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Orc.Player;
@@ -528,66 +374,11 @@
 		BC0CB9451F0E78D700FCA45A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Player/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Orc.Player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		BC0CB9471F0E78D700FCA45A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PlayerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Orc.PlayerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Player.app/Player";
-			};
-			name = Debug;
-		};
-		BC0CB9481F0E78D700FCA45A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = PlayerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Orc.PlayerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Player.app/Player";
-			};
-			name = Release;
-		};
-		BC0CB94A1F0E78D700FCA45A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = PlayerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Orc.PlayerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Player;
-			};
-			name = Debug;
-		};
-		BC0CB94B1F0E78D700FCA45A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = PlayerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Orc.PlayerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Player;
 			};
 			name = Release;
 		};
@@ -608,24 +399,6 @@
 			buildConfigurations = (
 				BC0CB9441F0E78D700FCA45A /* Debug */,
 				BC0CB9451F0E78D700FCA45A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BC0CB9461F0E78D700FCA45A /* Build configuration list for PBXNativeTarget "PlayerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC0CB9471F0E78D700FCA45A /* Debug */,
-				BC0CB9481F0E78D700FCA45A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BC0CB9491F0E78D700FCA45A /* Build configuration list for PBXNativeTarget "PlayerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BC0CB94A1F0E78D700FCA45A /* Debug */,
-				BC0CB94B1F0E78D700FCA45A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
