@@ -11,23 +11,16 @@ import AVKit
 import AVFoundation
 
 class PlayerController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet weak var playerButton: UIButton?
     var urlForPlaying: String = ""
     var musicVar: MusicService = JsonFileMusicService()
     var musicLister: Array<String> = []
     var musicList: Array<String> = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.appendMusicList()
         self.appendMusicLister()
         // Do any additional setup after loading the view.
     }
     
-    func appendMusicList() {
-        for i in musicVar.musicList {
-            musicList.append(i.name)
-        }
-    }
     func appendMusicLister() {
         for i in musicVar.musicList {
             musicLister.append(i.url)
@@ -53,13 +46,12 @@ class PlayerController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        urlForPlaying = musicList[indexPath.row]
-        playerButton?.addTarget(self, action:#selector(playButton), for: .touchUpInside)
+        urlForPlaying = musicLister[indexPath.row]
         
     }
     
-    @IBAction func playButton() {
-        let url = Bundle.main.url(forResource: urlForPlaying, withExtension: "mp3")
+    @IBAction func playButton(_ sender:Any) {
+        let url = Bundle.main.url(forResource: urlForPlaying, withExtension: "")
         let player = AVPlayer(url:url!)
         let controller = AVPlayerViewController()
         controller.player = player

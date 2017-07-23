@@ -43,17 +43,14 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvU-gF-wFb">
                                 <rect key="frame" x="135" y="80" width="50" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&gt;"/>
+                                <state key="normal" title="Play"/>
                                 <connections>
-                                    <action selector="playButton:" destination="C4s-nc-pbC" eventType="touchUpInside" id="Mde-0a-Y17"/>
+                                    <action selector="playButton:" destination="C4s-nc-pbC" eventType="touchUpInside" id="22T-ef-tWJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="playButton" destination="BvU-gF-wFb" id="PL2-5K-Zjg"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXD-6c-jjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
