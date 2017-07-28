@@ -11,6 +11,7 @@ import AVKit
 import AVFoundation
 
 class PlayerController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var Play: UIButton!
     var urlForPlaying: String = ""
     var musicVar: MusicService = JsonFileMusicService()
     var musicLister: Array<String> = []
@@ -53,6 +54,7 @@ class PlayerController: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         urlForPlaying = musicLister[indexPath.row]
+        Play.addTarget(self, action:#selector(playButton(_:)), for: .touchUpInside)
         
     }
     
@@ -65,7 +67,14 @@ class PlayerController: UIViewController, UITableViewDataSource, UITableViewDele
             player.play()
         }
     }
-
+    
+    func archiveData(musicList: [Music]) -> Data {
+        return NSKeyedArchiver.archivedData(withRootObject: musicList)
+    }
+    
+    func unarchiveData(data: Data) -> [Music] {
+        return NSKeyedUnarchiver.unarchiveObject(with: data) as? [Music] ?? []
+    }
     /*
     // MARK: - Navigation
 
