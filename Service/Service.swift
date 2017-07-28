@@ -55,34 +55,3 @@ class JsonFileMusicService: NSObject, MusicService, NSCoding {
         
     }
 }
-/*
-class MusicArchive: NSObject, NSCoding{
-    var musicStruct: Music = Music(name: "", url: "", genre: "", album: "", author: "")
-    var _name: String = ""
-    
-    
-    init(name: String) {
-        self._name = name
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        if let nameObj = aDecoder.decodeObject(forKey: musicStruct.name) as? String {
-            _name = nameObj
-        }
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(_name, forKey: musicStruct.name)
-    }
-    
-    name: String {
-        get {
-        return _name
-        }
-        set {
-        return _name = newvalue
-        }
- }
- 
-}
-*/
