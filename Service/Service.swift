@@ -10,17 +10,17 @@ import Foundation
 import UIKit
 
 protocol MusicService {
-    var musicList: Array<Music> {get}
+    var musicList: [Music] { get }
 }
 
-class JsonFileMusicService: NSObject, MusicService, NSCoding {
-    var musicList: Array<Music> = []
-    override init() {
-        super.init()
-        self.musicList = self.jsonSerialize()
+class JsonFileMusicService: MusicService {
+    var musicList: [Music] = []
+    
+    init() {
+        musicList = jsonSerialize()
     }
     
-    func jsonSerialize() -> Array<Music> {
+    func jsonSerialize() -> [Music] {
        let data: Data
        let url = Bundle.main.url(forResource: "Data", withExtension: "json")
         
@@ -45,13 +45,5 @@ class JsonFileMusicService: NSObject, MusicService, NSCoding {
             print(error.localizedDescription)
         }
         return musicList
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        
     }
 }

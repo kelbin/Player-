@@ -11,38 +11,30 @@ import AVKit
 import AVFoundation
 
 class PlayerController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var urlForPlaying: String = ""
+    var urlForPlaying = ""
     var musicVar: MusicService = JsonFileMusicService()
-    var musicLister: Array<String> = []
-    var musicList: Array<String> = []
+    var musicList: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.appendMusicList()
-        self.appendMusicLister()
-        // Do any additional setup after loading the view.
+        appendMusicList()
+        appendMusicLister()
     }
     
-    func appendMusicList() {
+    func appendMusicName() {
         for i in musicVar.musicList {
             musicList.append(i.name)
         }
     }
-    func appendMusicLister() {
+    
+    func appendMusicUrl() {
         for i in musicVar.musicList {
             musicLister.append(i.url)
         }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return musicList.count
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
