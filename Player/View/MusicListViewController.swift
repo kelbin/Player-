@@ -1,5 +1,5 @@
 //
-//  PlayerController.swift
+//  MusicListViewController.swift
 //  Player
 //
 //  Created by Келбин on 20.07.17.
@@ -10,27 +10,18 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class PlayerController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class  MusicListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var urlForPlaying = ""
     var musicVar: MusicService = JsonFileMusicService()
-    var musicList: [String] = []
+    var musicList: [Music] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        appendMusicList()
-        appendMusicLister()
-    }
-    
-    func appendMusicName() {
-        for i in musicVar.musicList {
-            musicList.append(i.name)
-        }
+        appendMusicUrl()
     }
     
     func appendMusicUrl() {
-        for i in musicVar.musicList {
-            musicLister.append(i.url)
-        }
+        musicList = musicVar.musicList
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,16 +30,15 @@ class PlayerController: UIViewController, UITableViewDataSource, UITableViewDele
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = musicList[indexPath.row]
+        cell.textLabel?.text = musicList[indexPath.row].name
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        urlForPlaying = musicLister[indexPath.row]
-        
+        urlForPlaying = musicList[indexPath.row].url
     }
     
-    @IBAction func playButton(_ sender:Any) {
+    @IBAction func playButton(_ sender: Any) {
         let url = Bundle.main.url(forResource: urlForPlaying, withExtension: "")
         let player = AVPlayer(url:url!)
         let controller = AVPlayerViewController()
@@ -57,7 +47,7 @@ class PlayerController: UIViewController, UITableViewDataSource, UITableViewDele
             player.play()
         }
     }
-    
+   
     func archiveData(musicList: [Music]) -> Data {
         return NSKeyedArchiver.archivedData(withRootObject: musicList)
     }

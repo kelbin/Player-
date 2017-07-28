@@ -12,7 +12,7 @@
         <!--Music List View Controller-->
         <scene sceneID="MNp-HP-YHx">
             <objects>
-                <viewController id="C4s-nc-pbC" customClass="MusicListViewController" sceneMemberID="viewController">
+                <viewController id="C4s-nc-pbC" customClass="MusicListViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dKg-ma-Fb7"/>
                         <viewControllerLayoutGuide type="bottom" id="rwf-JO-6fH"/>
@@ -26,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
-                                    <action selector="playButton:" destination="C4s-nc-pbC" eventType="touchUpInside" id="22T-ef-tWJ"/>
+                                    <action selector="playButton:" destination="C4s-nc-pbC" eventType="touchUpInside" id="15F-Ki-aQA"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dac-s2-kGk">
@@ -38,7 +38,7 @@
                                         <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CUF-BX-j5s" id="Wse-xe-idi">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -51,9 +51,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="Play" destination="BvU-gF-wFb" id="AWq-ah-TOb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXD-6c-jjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
