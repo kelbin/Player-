@@ -33,12 +33,14 @@ class Music: NSObject, NSCoding {
     }
     
     required convenience init?(coder decoder: NSCoder) {
-        guard let name = decoder.decodeObject(forKey: Keys.nameKey) as? String,
-        let url = decoder.decodeObject(forKey: Keys.urlKey) as? String,
-        let album = decoder.decodeObject(forKey: Keys.albumKey) as? String,
-        let genre = decoder.decodeObject(forKey: Keys.genreKey) as? String,
-        let author =  decoder.decodeObject(forKey: Keys.authorKey) as? String
+        guard
+            let name = decoder.decodeObject(forKey: Keys.nameKey) as? String,
+            let url = decoder.decodeObject(forKey: Keys.urlKey) as? String,
+            let album = decoder.decodeObject(forKey: Keys.albumKey) as? String,
+            let genre = decoder.decodeObject(forKey: Keys.genreKey) as? String,
+            let author =  decoder.decodeObject(forKey: Keys.authorKey) as? String
         else { return nil }
+        
         self.init(
             name: name,
             url: url,
