@@ -16,7 +16,6 @@ class Music: NSObject, NSCoding {
     var album:String?
     var author:String?
     
-    
    private struct Keys {
         static let nameKey = "name"
         static let urlKey = "url"
