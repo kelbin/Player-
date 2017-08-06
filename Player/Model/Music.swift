@@ -32,7 +32,7 @@ class Music: NSObject, NSCoding {
         self.author = author
     }
     
-    required convenience init?(coder decoder: NSCoder) {
+    convenience required init?(coder decoder: NSCoder) {
         guard
             let name = decoder.decodeObject(forKey: Keys.nameKey) as? String,
             let url = decoder.decodeObject(forKey: Keys.urlKey) as? String,

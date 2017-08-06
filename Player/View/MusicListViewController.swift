@@ -11,13 +11,16 @@ import AVKit
 import AVFoundation
 
 class  MusicListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet var play: UIButton!
     var urlForPlaying = ""
     var musicVar: MusicService = JsonFileMusicService()
     var musicList: [Music] = []
+    var player: AVAudioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         appendMusicUrl()
+        
     }
     
     func appendMusicUrl() {
@@ -28,26 +31,36 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         return musicList.count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = musicList[indexPath.row].name
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? MusicTableViewCell else { fatalError("Can't create cell") }
+        cell.music = musicList[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        urlForPlaying = musicList[indexPath.row].url
+        guard let cell = tableView.cellForRow(at: indexPath) as? MusicTableViewCell else { return }
+        if let url = cell.music?.url { urlForPlaying = url  }
     }
     
     @IBAction func playButton(_ sender: Any) {
+        do {
         let url = Bundle.main.url(forResource: urlForPlaying, withExtension: "")
-        let player = AVPlayer(url:url!)
-        let controller = AVPlayerViewController()
-        controller.player = player
-        present(controller,animated: true) {
-            player.play()
+        try player = AVAudioPlayer(contentsOf: url!)
         }
+        catch { print("Error") }
+        player.play()
+        play.setTitle("Pause", for: .normal)
+        if (play.titleLabel?.text == "Pause") {
+            play.setTitle("Play", for: .normal)
+            player.pause()
+        }
+        
     }
-   
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
     func archiveData(musicList: [Music]) -> Data {
         return NSKeyedArchiver.archivedData(withRootObject: musicList)
     }
