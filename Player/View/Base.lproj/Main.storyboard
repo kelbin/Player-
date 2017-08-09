@@ -68,14 +68,6 @@
                                     <outlet property="delegate" destination="C4s-nc-pbC" id="0ws-8q-EJQ"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvU-gF-wFb">
-                                <rect key="frame" x="136" y="515" width="48" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play"/>
-                                <connections>
-                                    <action selector="playButton:" destination="C4s-nc-pbC" eventType="touchUpInside" id="15F-Ki-aQA"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="heM-F0-rD6">
                                 <rect key="frame" x="190" y="522" width="116" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -83,12 +75,17 @@
                                     <action selector="musicRewind:" destination="C4s-nc-pbC" eventType="valueChanged" id="ybe-ao-bDT"/>
                                 </connections>
                             </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60y-ej-dFp">
+                                <rect key="frame" x="136" y="515" width="48" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="durationMusic" destination="heM-F0-rD6" id="X5p-WI-wCc"/>
-                        <outlet property="play" destination="BvU-gF-wFb" id="OLc-3T-66p"/>
+                        <outlet property="playButton" destination="60y-ej-dFp" id="XgJ-wa-oVh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXD-6c-jjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
