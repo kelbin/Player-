@@ -16,11 +16,12 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
     var musicVar: MusicService = JsonFileMusicService()
     var musicList: [Music] = []
     var player: AVAudioPlayer = AVAudioPlayer()
+    @IBOutlet weak var durationMusic: UISlider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         appendMusicUrl()
-        
+        play.isHidden = true
     }
     
     func appendMusicUrl() {
@@ -37,35 +38,53 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? MusicTableViewCell else { return }
-        if let url = cell.music?.url { urlForPlaying = url  }
+    @IBAction func musicRewind(_ sender: UISlider) {
+        player.currentTime = TimeInterval(sender.value)
     }
     
-    @IBAction func playButton(_ sender: Any) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? MusicTableViewCell else { return }
+        if let url = cell.music?.url { urlForPlaying = url }
+        play.isHidden = false
+        initAudioPlayer()
+    }
+    
+    func initAudioPlayer() {
         do {
-        let url = Bundle.main.url(forResource: urlForPlaying, withExtension: "")
-        try player = AVAudioPlayer(contentsOf: url!)
+            let url = Bundle.main.url(forResource: urlForPlaying, withExtension: "")
+            try player = AVAudioPlayer(contentsOf: url!)
+        } catch {
+            print("Error")
         }
-        catch { print("Error") }
-        player.play()
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSlider(_:))
+    }
+    
+    @IBAction func playButton(_ sender: UISlider) {
         play.setTitle("Pause", for: .normal)
-        if (play.titleLabel?.text == "Pause") {
-            play.setTitle("Play", for: .normal)
-            player.pause()
+        player.play()
+        durationMusic?.maximumValue = Float(player.duration)
+        durationMusic?.value = Float(player.currentTime)
+        durationMusic?.isContinuous = true
+        if (player.play()) {
+            play.addTarget(self, action: #selector(stopButton(_:)), for: .touchUpInside)
+        } else {
+            player.play()
         }
         
     }
     
+    func updateSlider(_ timer: Timer) {
+        durationMusic?.value = Float(player.currentTime)
+        durationMusic?.isContinuous = true
+    }
+    
+    @IBAction func stopButton(_ sender:Any) {
+        play.setTitle("Play", for: .normal)
+        player.pause()
+        play.addTarget(self, action:#selector(playButton(_:)), for: .touchUpInside)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
-    }
-    
-    func archiveData(musicList: [Music]) -> Data {
-        return NSKeyedArchiver.archivedData(withRootObject: musicList)
-    }
-    
-    func unarchiveData(data: Data) -> [Music] {
-        return NSKeyedUnarchiver.unarchiveObject(with: data) as? [Music] ?? []
     }
 }

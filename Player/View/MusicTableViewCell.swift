@@ -24,11 +24,5 @@ class MusicTableViewCell: UITableViewCell {
         genreLabel?.text = music?.genre
         authorLabel?.text = music?.author
     }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-    }
-    
 }
 
