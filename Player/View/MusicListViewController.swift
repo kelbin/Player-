@@ -56,7 +56,7 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         } catch {
             print("Error")
         }
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSlider(_:))
+       // Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSlider(_:))
     }
     
     @IBAction func playButton(_ sender: UISlider) {
@@ -64,19 +64,17 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         player.play()
         durationMusic?.maximumValue = Float(player.duration)
         durationMusic?.value = Float(player.currentTime)
-        durationMusic?.isContinuous = true
         if (player.play()) {
             play.addTarget(self, action: #selector(stopButton(_:)), for: .touchUpInside)
         } else {
             player.play()
         }
-        
     }
-    
+    /*
     func updateSlider(_ timer: Timer) {
         durationMusic?.value = Float(player.currentTime)
         durationMusic?.isContinuous = true
-    }
+    }*/
     
     @IBAction func stopButton(_ sender:Any) {
         play.setTitle("Play", for: .normal)
