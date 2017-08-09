@@ -12,7 +12,8 @@
 		BC1C084B1F2B9F5C006AEB36 /* Utmarken - Förfallstid.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC1C08471F2B9F5C006AEB36 /* Utmarken - Förfallstid.mp3 */; };
 		BC1C084C1F2B9F5C006AEB36 /* Utmarken - Vintern.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC1C08481F2B9F5C006AEB36 /* Utmarken - Vintern.mp3 */; };
 		BC3396111F3B574E00F5EBE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33960F1F3B574E00F5EBE8 /* AppDelegate.swift */; };
-		BC3396121F3B574E00F5EBE8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC3396101F3B574E00F5EBE8 /* Info.plist */; };
+		BC3396141F3B5A2C00F5EBE8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC3396131F3B5A2C00F5EBE8 /* Default-568h@2x.png */; };
+		BC3396151F3B5DDC00F5EBE8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC3396101F3B574E00F5EBE8 /* Info.plist */; };
 		BC74E4401F30D1F2006360E0 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC74E43F1F30D1F2006360E0 /* MusicTableViewCell.swift */; };
 		BC7A51EE1F2154E70047DABD /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A51DE1F2154E70047DABD /* Music.swift */; };
 		BC7A51F41F2154E70047DABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51E71F2154E70047DABD /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		BC1C08481F2B9F5C006AEB36 /* Utmarken - Vintern.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Utmarken - Vintern.mp3"; sourceTree = "<group>"; };
 		BC33960F1F3B574E00F5EBE8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC3396101F3B574E00F5EBE8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC3396131F3B5A2C00F5EBE8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BC74E43F1F30D1F2006360E0 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		BC7A51DE1F2154E70047DABD /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		BC7A51E71F2154E70047DABD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		BC0CB9121F0E78D700FCA45A = {
 			isa = PBXGroup;
 			children = (
+				BC3396131F3B5A2C00F5EBE8 /* Default-568h@2x.png */,
 				BC1C08431F2B9F5C006AEB36 /* Stuff */,
 				BC7A51FB1F2154FD0047DABD /* Resources */,
 				BC7A51F81F2154F60047DABD /* Service */,
@@ -220,9 +223,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC3396151F3B5DDC00F5EBE8 /* Info.plist in Resources */,
 				BC1C08491F2B9F5C006AEB36 /* Haggard - Awaking the Centuries.mp3 in Resources */,
 				BC1C084A1F2B9F5C006AEB36 /* Haggard - Eppur si muove.mp3 in Resources */,
-				BC3396121F3B574E00F5EBE8 /* Info.plist in Resources */,
+				BC3396141F3B5A2C00F5EBE8 /* Default-568h@2x.png in Resources */,
 				BC7A51F61F2154E70047DABD /* Main.storyboard in Resources */,
 				BC7A51FF1F2154FD0047DABD /* Data.json in Resources */,
 				BC7A51F51F2154E70047DABD /* LaunchScreen.storyboard in Resources */,
@@ -367,7 +371,7 @@
 		BC0CB9441F0E78D700FCA45A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Player/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Orc.Player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,7 +382,7 @@
 		BC0CB9451F0E78D700FCA45A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Player/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Orc.Player;
 				PRODUCT_NAME = "$(TARGET_NAME)";
