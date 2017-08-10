@@ -11,13 +11,12 @@ import AVKit
 import AVFoundation
 
 class  MusicListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    @IBOutlet weak var playButton: UIButton?
-    var urlForPlaying = ""
-    var musicVar: MusicService = JsonFileMusicService()
-    var musicList: [Music] = []
-    var player: AVAudioPlayer = AVAudioPlayer()
-    @IBOutlet weak var durationMusic: UISlider?
+    private var urlForPlaying = ""
+    private var timer:Timer? = nil
+    private var musicList: [Music] = []
+    private var player: AVAudioPlayer = AVAudioPlayer()
+    @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var musicPositionSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +24,23 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         playButton?.isHidden = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        timer? = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSlider(_:))
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer?.invalidate()
+    }
+    
     func appendMusicUrl() {
+        let musicVar: MusicService = JsonFileMusicService()
         musicList = musicVar.musicList
+    }
+    
+    func initAudioPlayer() {
+        guard let url = Bundle.main.url(forResource: urlForPlaying, withExtension: "") else { return }
+        guard let player = try? AVAudioPlayer(contentsOf: url) else { return }
+        self.player = player
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,10 +53,6 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
-    @IBAction func musicRewind(_ sender: UISlider) {
-        player.currentTime = TimeInterval(sender.value)
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? MusicTableViewCell else { return }
         if let url = cell.music?.url { urlForPlaying = url }
@@ -50,42 +60,37 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         initAudioPlayer()
     }
     
-    func initAudioPlayer() {
-        do {
-            let url = Bundle.main.url(forResource: urlForPlaying, withExtension: "")
-            try player = AVAudioPlayer(contentsOf: url!)
-        }
-        catch {
-            print("Error")
-        }
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSlider(_:))
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
-    @IBAction func playButton(_ sender: UISlider) {
-        playButton?.setTitle("Pause", for: .normal)
+    func updateSlider(_ timer: Timer) {
+        musicPositionSlider.value = Float(player.currentTime)
+        musicPositionSlider.isContinuous = true
+    }
+    
+    @IBAction func playMusic(_ sender: Any) {
         player.play()
-        durationMusic?.maximumValue = Float(player.duration)
-        durationMusic?.value = Float(player.currentTime)
-        if (player.play()) {
-            playButton?.addTarget(self, action: #selector(stopButton(_:)), for: .touchUpInside)
+        playButton.setTitle("Pause", for: .normal)
+        musicPositionSlider.maximumValue = Float(player.duration)
+        musicPositionSlider.value = Float(player.currentTime)
+        if playButton.titleLabel?.text == "Pause" {
+            playButton.setTitle("Play", for: .normal)
+            player.pause()
+            //playButton?.addTarget(self, action: #selector(stopButton(_:)), for: .touchUpInside)
         }
         else {
             player.play()
         }
     }
     
-    func updateSlider(_ timer: Timer) {
-        durationMusic?.value = Float(player.currentTime)
-        durationMusic?.isContinuous = true
+    @IBAction func musicRewind(_ sender: UISlider) {
+        player.currentTime = TimeInterval(sender.value)
     }
     
-    @IBAction func stopButton(_ sender:Any) {
+  /*  @IBAction func stopButton(_ sender:Any) {
         playButton?.setTitle("Play", for: .normal)
         player.pause()
         playButton?.addTarget(self, action:#selector(playButton(_:)), for: .touchUpInside)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
+    }*/
 }
