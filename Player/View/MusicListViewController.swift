@@ -15,8 +15,8 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
     private var timer:Timer? = nil
     private var musicList: [Music] = []
     private var player: AVAudioPlayer = AVAudioPlayer()
-    @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var musicPositionSlider: UISlider!
+    @IBOutlet private weak var playButton: UIButton!
+    @IBOutlet private weak var musicPositionSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +32,12 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         timer?.invalidate()
     }
     
-    func appendMusicUrl() {
+    private func appendMusicUrl() {
         let musicVar: MusicService = JsonFileMusicService()
         musicList = musicVar.musicList
     }
     
-    func initAudioPlayer() {
+    private func initAudioPlayer() {
         guard let url = Bundle.main.url(forResource: urlForPlaying, withExtension: "") else { return }
         guard let player = try? AVAudioPlayer(contentsOf: url) else { return }
         self.player = player
@@ -64,12 +64,12 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         return 80
     }
     
-    func updateSlider(_ timer: Timer) {
+    private func updateSlider(_ timer: Timer) {
         musicPositionSlider.value = Float(player.currentTime)
         musicPositionSlider.isContinuous = true
     }
     
-    @IBAction func playMusic(_ sender: Any) {
+    @IBAction private func playMusic(_ sender: Any) {
         player.play()
         playButton.setTitle("Pause", for: .normal)
         musicPositionSlider.maximumValue = Float(player.duration)
@@ -77,20 +77,13 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         if playButton.titleLabel?.text == "Pause" {
             playButton.setTitle("Play", for: .normal)
             player.pause()
-            //playButton?.addTarget(self, action: #selector(stopButton(_:)), for: .touchUpInside)
         }
         else {
             player.play()
         }
     }
     
-    @IBAction func musicRewind(_ sender: UISlider) {
+    @IBAction private func musicRewind(_ sender: UISlider) {
         player.currentTime = TimeInterval(sender.value)
     }
-    
-  /*  @IBAction func stopButton(_ sender:Any) {
-        playButton?.setTitle("Play", for: .normal)
-        player.pause()
-        playButton?.addTarget(self, action:#selector(playButton(_:)), for: .touchUpInside)
-    }*/
 }

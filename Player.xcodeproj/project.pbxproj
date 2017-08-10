@@ -13,7 +13,6 @@
 		BC1C084C1F2B9F5C006AEB36 /* Utmarken - Vintern.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BC1C08481F2B9F5C006AEB36 /* Utmarken - Vintern.mp3 */; };
 		BC3396111F3B574E00F5EBE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC33960F1F3B574E00F5EBE8 /* AppDelegate.swift */; };
 		BC3396141F3B5A2C00F5EBE8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC3396131F3B5A2C00F5EBE8 /* Default-568h@2x.png */; };
-		BC3396151F3B5DDC00F5EBE8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC3396101F3B574E00F5EBE8 /* Info.plist */; };
 		BC74E4401F30D1F2006360E0 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC74E43F1F30D1F2006360E0 /* MusicTableViewCell.swift */; };
 		BC7A51EE1F2154E70047DABD /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7A51DE1F2154E70047DABD /* Music.swift */; };
 		BC7A51F41F2154E70047DABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7A51E71F2154E70047DABD /* Assets.xcassets */; };
@@ -223,7 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC3396151F3B5DDC00F5EBE8 /* Info.plist in Resources */,
 				BC1C08491F2B9F5C006AEB36 /* Haggard - Awaking the Centuries.mp3 in Resources */,
 				BC1C084A1F2B9F5C006AEB36 /* Haggard - Eppur si muove.mp3 in Resources */,
 				BC3396141F3B5A2C00F5EBE8 /* Default-568h@2x.png in Resources */,
