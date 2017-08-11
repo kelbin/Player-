@@ -23,11 +23,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dac-s2-kGk">
-                                <rect key="frame" x="0.0" y="40" width="320" height="491"/>
+                                <rect key="frame" x="0.0" y="40" width="320" height="498"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="491" id="MqY-SH-0qp"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="74" id="CUF-BX-j5s" customClass="MusicTableViewCell" customModule="Player" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="74"/>
@@ -37,7 +34,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRl-en-8IL">
-                                                    <rect key="frame" x="19" y="15" width="541" height="21"/>
+                                                    <rect key="frame" x="19" y="15" width="348" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -52,7 +49,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="genreLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwC-lU-4vP">
-                                                    <rect key="frame" x="166" y="44" width="394" height="21"/>
+                                                    <rect key="frame" x="166" y="44" width="201" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -82,7 +79,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60y-ej-dFp">
-                                <rect key="frame" x="145" y="531" width="30" height="37"/>
+                                <rect key="frame" x="145" y="538" width="30" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playMusic:" destination="C4s-nc-pbC" eventType="touchUpInside" id="Rhf-OQ-9VX"/>
@@ -99,16 +96,15 @@
                         <constraints>
                             <constraint firstItem="rwf-JO-6fH" firstAttribute="top" secondItem="6oZ-5a-9KS" secondAttribute="bottom" constant="4" id="1Tl-gz-Hpj"/>
                             <constraint firstAttribute="trailing" secondItem="dac-s2-kGk" secondAttribute="trailing" id="CiU-47-wBV"/>
-                            <constraint firstItem="6oZ-5a-9KS" firstAttribute="trailing" secondItem="joT-Km-TPG" secondAttribute="trailingMargin" constant="10" id="ER2-QA-dcs"/>
                             <constraint firstItem="6oZ-5a-9KS" firstAttribute="leading" secondItem="60y-ej-dFp" secondAttribute="trailing" constant="35" id="JQE-hJ-pli"/>
                             <constraint firstItem="60y-ej-dFp" firstAttribute="top" secondItem="dac-s2-kGk" secondAttribute="bottom" id="PJ3-CP-PKf"/>
                             <constraint firstItem="dac-s2-kGk" firstAttribute="leading" secondItem="joT-Km-TPG" secondAttribute="leading" id="bH0-q9-dm3"/>
-                            <constraint firstItem="dac-s2-kGk" firstAttribute="top" secondItem="dKg-ma-Fb7" secondAttribute="bottom" constant="20" id="bVi-wH-911"/>
                             <constraint firstItem="6oZ-5a-9KS" firstAttribute="trailing" secondItem="joT-Km-TPG" secondAttribute="trailingMargin" constant="10" id="e0d-mN-scX"/>
                             <constraint firstItem="dac-s2-kGk" firstAttribute="centerX" secondItem="60y-ej-dFp" secondAttribute="centerX" id="j3I-fG-yF1"/>
                             <constraint firstItem="rwf-JO-6fH" firstAttribute="top" secondItem="60y-ej-dFp" secondAttribute="bottom" id="ldY-gt-qdc"/>
                             <constraint firstItem="rwf-JO-6fH" firstAttribute="top" secondItem="60y-ej-dFp" secondAttribute="bottom" id="tFp-2B-QBd"/>
-                            <constraint firstItem="rwf-JO-6fH" firstAttribute="top" secondItem="dac-s2-kGk" secondAttribute="bottom" constant="37" id="zH8-5L-JeW"/>
+                            <constraint firstItem="rwf-JO-6fH" firstAttribute="top" relation="lessThanOrEqual" secondItem="dac-s2-kGk" secondAttribute="bottom" constant="37" id="zH8-5L-JeW"/>
+                            <constraint firstItem="dac-s2-kGk" firstAttribute="top" secondItem="dKg-ma-Fb7" secondAttribute="bottom" constant="20" id="zmF-E5-dYR"/>
                         </constraints>
                     </view>
                     <connections>
