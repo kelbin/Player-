@@ -12,8 +12,8 @@ import AVFoundation
 
 class  MusicListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     private var urlForPlaying = ""
-    private var timer:Timer? = nil
     private var musicList: [Music] = []
+    private var timer:Timer?
     private var player: AVAudioPlayer = AVAudioPlayer()
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var musicPositionSlider: UISlider!
@@ -64,12 +64,12 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         return 80
     }
     
-    private func updateSlider(_ timer: Timer) {
+    @IBAction private func updateSlider(_ timer: Timer) {
         musicPositionSlider.value = Float(player.currentTime)
         musicPositionSlider.isContinuous = true
     }
     
-    @IBAction private func playMusic(_ sender: Any) {
+    @IBAction private func playMusic(_ sender: UIButton) {
         player.play()
         playButton.setTitle("Pause", for: .normal)
         musicPositionSlider.maximumValue = Float(player.duration)
@@ -77,9 +77,6 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         if playButton.titleLabel?.text == "Pause" {
             playButton.setTitle("Play", for: .normal)
             player.pause()
-        }
-        else {
-            player.play()
         }
     }
     
