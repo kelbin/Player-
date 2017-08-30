@@ -5,28 +5,32 @@
     "url": "Haggard - Awaking the Centuries.mp3",
     "genre": "Epic Metal",
     "album": "Awaking the Centuries",
-    "author": "Haggard"
+    "author": "Haggard",
+    "picture": "https://www.metal-archives.com/images/6/3/63_logo.jpg?2329"
   },
   {
     "name": "Haggard - Eppur si muove",
     "url": "Haggard - Eppur si muove.mp3",
     "genre": "Epic Metal",
     "album": "Eppur si muove",
-    "author": "Haggard"
+    "author": "Haggard",
+    "picture": "https://www.metal-archives.com/images/6/3/63_logo.jpg?2329"
   },
   {
     "name": "Utmarken - Förfallstid",
     "url": "Utmarken - Förfallstid.mp3",
     "genre": "Folk Metal",
     "album": "Förfallstid",
-    "author": "Utmarken"
+    "author": "Utmarken",
+    "picture": "http://www.folk-metal.nl/wp-content/uploads/2016/12/utmarken-forfallstid-300x296.jpg"
   },
   {
     "name": "Utmarken - Vintern",
     "url": "Utmarken - Vintern.mp3",
     "genre": "Folk Metal",
     "album": "Förfallstid",
-    "author": "Utmarken"
+    "author": "Utmarken",
+    "picture": "http://www.folk-metal.nl/wp-content/uploads/2016/12/utmarken-forfallstid-300x296.jpg"
   }
 ]
   

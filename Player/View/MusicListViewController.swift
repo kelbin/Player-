@@ -10,22 +10,24 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class  MusicListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class  MusicListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AVAudioPlayerDelegate {
     private var urlForPlaying = ""
     private var musicList: [Music] = []
     private var timer:Timer?
     private var player: AVAudioPlayer = AVAudioPlayer()
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var musicPositionSlider: UISlider!
+    @IBOutlet private weak var previousMusicButton: UIButton!
+    @IBOutlet private weak var nextMusicButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         appendMusicUrl()
-        playButton?.isHidden = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        timer? = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSlider(_:))
+        musicPositionSlider.value = 0
+        previousMusicButton.isEnabled = false
+        nextMusicButton.isEnabled = false
+        playButton?.isEnabled = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -53,15 +55,38 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? MusicTableViewCell else { return }
         if let url = cell.music?.url { urlForPlaying = url }
-        playButton?.isHidden = false
+        playButton?.isEnabled = true
+        previousMusicButton.isEnabled = true
+        nextMusicButton.isEnabled = true
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSlider(_:))
         initAudioPlayer()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        player.play()
+    }
+    
+    @IBAction func previousMusic(_ sender: UIButton) {
+        guard let indexpath = self.tableView.indexPathForSelectedRow else { return }
+        let previous = musicList[indexpath.row - 1]
+        let url = previous.url
+        urlForPlaying = url
+        audioPlayerDidFinishPlaying(player, successfully: true)
+    }
+    
+    @IBAction func nextMusic(_ sender: UIButton) {
+        guard let indexpath = self.tableView.indexPathForSelectedRow else { return }
+        let next = musicList[indexpath.row + 1]
+        let url = next.url
+        urlForPlaying = url
+        player.play()
     }
     
     @IBAction private func updateSlider(_ timer: Timer) {
@@ -84,3 +109,4 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
         player.currentTime = TimeInterval(sender.value)
     }
 }
+

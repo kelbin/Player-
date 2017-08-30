@@ -9,10 +9,13 @@
 import UIKit
 
 class MusicTableViewCell: UITableViewCell {
-    @IBOutlet var genreLabel: UILabel?
-    @IBOutlet var authorLabel: UILabel?
-    @IBOutlet var nameLabel: UILabel?
-
+    @IBOutlet public var genreLabel: UILabel?
+    @IBOutlet public var authorLabel: UILabel?
+    @IBOutlet public var nameLabel: UILabel?
+    @IBOutlet public var pictureView: UIImageView!
+    var picture = GetPicture()
+    
+    
     var music: Music? {
         didSet {
             updateUI()
@@ -20,9 +23,15 @@ class MusicTableViewCell: UITableViewCell {
     }
     
     func updateUI() {
+        guard let url = URL(string: (music?.picture)!) else { return }
+        picture.loadPicture(url: url)
+        pictureView.image = picture.image
         nameLabel?.text = music?.name
         genreLabel?.text = music?.genre
         authorLabel?.text = music?.author
     }
+    
+    
+    
 }
 

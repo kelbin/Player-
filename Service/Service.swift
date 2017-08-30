@@ -24,8 +24,8 @@ class JsonFileMusicService: MusicService {
        let data: Data
        let url = Bundle.main.url(forResource: "Data", withExtension: "json")
         
-        do {
-           try data = Data(contentsOf: url!)
+       do {
+            try data = Data(contentsOf: url!)
             let jsonObj = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
             if let jsonObj = jsonObj as? [String: Any] {
                 if let rootArray = jsonObj["music"] as? [[String:Any]] {
@@ -35,7 +35,8 @@ class JsonFileMusicService: MusicService {
                             url: musicJson["url"] as? String ?? "",
                             genre: musicJson["genre"] as? String ?? "",
                             album: musicJson["album"] as? String ?? "",
-                            author: musicJson["author"] as? String ?? ""
+                            author: musicJson["author"] as? String ?? "",
+                            picture: musicJson["picture"] as? String ?? ""
                         )
                         musicList.append(music)
                     }
@@ -45,5 +46,28 @@ class JsonFileMusicService: MusicService {
             print(error.localizedDescription)
         }
         return musicList
+    }
+}
+
+class GetPicture {
+    var image: UIImage? = nil
+    
+    func fetchPicture(url:URL,completion: @escaping (Data?,URLResponse?,Error?) -> Void) {
+        DispatchQueue.global(qos: .utility).async {
+            URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
+        }
+    }
+    
+    func loadPicture(url: URL) {
+        fetchPicture(url: url, completion: {(data,response,error) in
+            if (data != nil && error == nil) {
+                DispatchQueue.main.async {
+                   self.image = UIImage(data: data!)
+                }
+            } else if error != nil {
+                print(error as Any)
+            }
+        
+        })
     }
 }
