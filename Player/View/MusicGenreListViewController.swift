@@ -11,7 +11,7 @@ import UIKit
 class MusicGenreListViewController: UITableViewController {
     let musicVar: MusicService = JsonFileMusicService()
     private var uniqueMusicListGenre: [String] = []
-    public var musicListResult: [String] = []
+    public var musicListResult: [Music] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         shapingGenreList()
@@ -39,8 +39,8 @@ class MusicGenreListViewController: UITableViewController {
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let musicChange = uniqueMusicListGenre[indexPath.row]
-        let musicList = musicVar.musicList.filter{ $0.genre == musicChange }
-        musicListResult = musicList.map { $0.name }
+        musicListResult = musicVar.musicList.filter{ $0.genre == musicChange }
+        //musicListResult = musicList.map { $0.name }
         performSegue(withIdentifier: "segue", sender: self)
     }
     
