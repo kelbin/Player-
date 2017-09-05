@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+
 protocol MusicService {
     var musicList: [Music] { get }
 }
@@ -46,28 +47,5 @@ class JsonFileMusicService: MusicService {
             print(error.localizedDescription)
         }
         return musicList
-    }
-}
-
-class GetPicture {
-    var image: UIImage? = nil
-    
-    func fetchPicture(url:URL,completion: @escaping (Data?,URLResponse?,Error?) -> Void) {
-        DispatchQueue.global(qos: .utility).async {
-            URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-        }
-    }
-    
-    func loadPicture(url: URL) {
-        fetchPicture(url: url, completion: {(data,response,error) in
-            if (data != nil && error == nil) {
-                DispatchQueue.main.async {
-                   self.image = UIImage(data: data!)
-                }
-            } else if error != nil {
-                print(error as Any)
-            }
-        
-        })
     }
 }

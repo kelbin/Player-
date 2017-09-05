@@ -13,7 +13,6 @@ class MusicTableViewCell: UITableViewCell {
     @IBOutlet public var authorLabel: UILabel?
     @IBOutlet public var nameLabel: UILabel?
     @IBOutlet public var pictureView: UIImageView!
-    var picture = GetPicture()
     
     
     var music: Music? {
@@ -23,15 +22,29 @@ class MusicTableViewCell: UITableViewCell {
     }
     
     func updateUI() {
-        guard let url = URL(string: (music?.picture)!) else { return }
-        picture.loadPicture(url: url)
-        pictureView.image = picture.image
+        guard let url = URL(string: (music?.picture)!) else { fatalError("False") }
+        loadPicture(url: url)
         nameLabel?.text = music?.name
         genreLabel?.text = music?.genre
         authorLabel?.text = music?.author
     }
     
+    func fetchPicture(url: URL, completion: @escaping (_ data: Data?, _ response: URLResponse?,_ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data,response,error) in completion(data,response,error)
+            }.resume()
+    }
     
+    func loadPicture(url: URL) {
+        print("Начало загрузки")
+        fetchPicture(url: url) {(data, response, error) in
+            guard let data = data else { return }
+            DispatchQueue.main.async { () -> Void in
+                self.pictureView?.image = UIImage(data: data)
+            }
+        }
+    }
+
     
 }
 

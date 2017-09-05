@@ -38,15 +38,17 @@ class MusicGenreListSubViewController: UITableViewController {
         let nameBarButton = UIBarButtonItem()
         let urlBarButton = UIBarButtonItem()
         nameBarButton.title = musicList[indexPath.row].name
-        urlBarButton.title = musicList[indexPath.row].url
-        preparationBarButton(nameBarButton: nameBarButton, urlBarButton: urlBarButton)
+        //urlBarButton.title = musicList[indexPath.row].url
+        //urlBarButton.image = picture.image
+        //let image = UIImage(named: "Default-568h@2x.png")
+        preparationBarButton(nameBarButton: nameBarButton, urlBarButton: urlBarButton, imageUrl: musicList[indexPath.row].picture)
     }
     
-    private func preparationBarButton(nameBarButton:UIBarButtonItem, urlBarButton:UIBarButtonItem)  {
-        nameBarButton.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.black], for: .normal)
-        nameBarButton.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.black], for: .disabled)
-        urlBarButton.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.black], for: .normal)
-        urlBarButton.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.black], for: .disabled)
+    private func preparationBarButton(nameBarButton:UIBarButtonItem, urlBarButton:UIBarButtonItem, imageUrl: String)  {
+        nameBarButton.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.black, NSFontAttributeName:UIFont.boldSystemFont(ofSize: 10)], for: .normal)
+        nameBarButton.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.black, NSFontAttributeName:UIFont.boldSystemFont(ofSize: 10)], for: .disabled)
+        //print(picture.image as Any)
+        //urlBarButton.setBackgroundImage(picture.image, for: .normal, style: .plain, barMetrics: .default)
         nameBarButton.isEnabled = false
         urlBarButton.isEnabled = false
         let items: [UIBarButtonItem] = [nameBarButton,urlBarButton]

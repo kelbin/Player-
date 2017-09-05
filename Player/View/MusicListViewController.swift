@@ -15,6 +15,7 @@ class  MusicListViewController: UIViewController, UITableViewDataSource, UITable
     private var musicList: [Music] = []
     private var timer:Timer?
     private var player: AVAudioPlayer = AVAudioPlayer()
+    
     @IBOutlet private weak var playButton: UIButton!
     @IBOutlet private weak var musicPositionSlider: UISlider!
     @IBOutlet private weak var previousMusicButton: UIButton!
