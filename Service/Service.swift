@@ -49,3 +49,25 @@ class JsonFileMusicService: MusicService {
         return musicList
     }
 }
+
+extension UIImageView {
+    func fetchPicture(url: URL, completion: @escaping (_ data: Data?, _ response: URLResponse?,_ error: Error?) -> Void) {
+        DispatchQueue.global().async {
+            URLSession.shared.dataTask(with: url) {
+                (data,response,error) in completion(data,response,error)
+                }.resume()
+        }
+    }
+    
+    func loadPicture(url: URL) {
+        print("Начало загрузки")
+        fetchPicture(url: url) {(data, response, error) in
+            guard let data = data else { return }
+            let image = UIImage(data: data)
+            DispatchQueue.main.async { () -> Void in
+                self.image = image
+            }
+        }
+    }
+
+}
